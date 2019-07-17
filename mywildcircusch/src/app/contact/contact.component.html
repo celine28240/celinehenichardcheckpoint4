@@ -1,3 +1,30 @@
-<p>
-  contact works!
-</p>
+<div class="container">
+  <div class="col-12">
+    <h2 class="FormTitle">Nous contacter</h2>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+        <!--Formulaire-->
+      <form (ngSubmit)="submitForm()">
+        <div class="form-group">
+          <label for="firstname">Nom :</label>
+          <input name="firstname" class="form-control" type="text" placeholder="Dupont" [(ngModel)]="firstname">
+        </div>
+        <div class="form-group">
+          <label for="Email">Adresse email :</label>
+          <input name="email" type="email" class="form-control" id="putEmail" placeholder="jean.dupont@example.com" [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+          <label for="Phone">Téléphone :</label>
+          <input name="phone" class="form-control" type="text" placeholder="## ## ## ## ##" [(ngModel)]="phone">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Message :</label>
+          <textarea name="message" class="form-control" id="Message" rows="3" placeholder="Entrez votre message ici" [(ngModel)]="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</div>
+
